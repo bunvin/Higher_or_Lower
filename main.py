@@ -10,6 +10,8 @@ def new_game():
   game_over = False
   first_choice = random.choice(game_data.data)
   second_choice = random.choice(game_data.data)
+  if second_choice == first_choice:
+    second_choice = random.choice(game_data.data)
   
   while not game_over:
     print(f"Option A: {first_choice['name']},a {first_choice['description']} \nhas {first_choice['follower_count']}M followers.")
